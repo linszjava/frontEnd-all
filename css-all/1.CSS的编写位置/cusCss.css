@@ -1,0 +1,11 @@
+h3 {
+    color: orange;
+    font-size: 100px;
+}
+/* 给h1元素添加样式 */
+h1 {
+/* 设置文字颜色为红色 */
+    color: olivedrab;
+/* 设置文字大小为40px */
+    font-size: 40px
+}

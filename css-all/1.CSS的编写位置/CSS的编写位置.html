@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS的编写位置</title>
+    <!--3. 外部样式  -->
+    <link rel="stylesheet" href="cusCss.css">
+</head>
+
+<body>
+    <!-- 1.行内样式   -->
+    <p style="color: red; font-size: 50px">我是行内样式</p>
+    <!--2. 内部样式    -->
+    <h1>我是内部样式</h1>
+    <!--3. 外部样式  见cusCss.css   -->
+    <h3>我是外部样式</h3>
+</body>
+    <!--2. 内部样式
+    1. <style> 标签理论上可以放在 HTML 文档的任何地方，但一般都放在 <head> 标签 中。
+    2. 此种写法:样式可以复用、代码结构清晰。-->
+<style>
+    h1 {
+        color: green;
+        font-size: 50px;
+    }
+</style>
+</html>
+
+<!--说明
+       1. 优先级规则:行内样式 > 内部样式 = 外部样式 就近原则，后来居上
+
+
+-->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格实例</title>
+</head>
+<body>
+    <table >
+       <thead>
+       <tr>
+           <!-- th:表示表头 用td也行，但是用th会加粗 具体可以实测         -->
+           <th>姓名 </th>
+           <th>年龄 </th>
+           <th>性别 </th>
+       </tr>
+       </thead>
+        <tr>
+            <td>张三</td>
+            <td>18</td>
+            <td>男</td>
+        </tr>
+        <tr>
+            <td>李四</td>
+            <td>20</td>
+            <td>女</td>
+        </tr>
+        <tr>
+            <td>王五</td>
+            <td>22</td>
+            <td>男</td>
+        </tr>
+        <tfoot>
+            <tr>
+<!--                <td colspan="3">3</td>-->
+                <td >3</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr>
+    <!-- colspan的用法   -->
+    <table border="1">
+        <tr>
+            <td>第一列，第一行</td>
+            <td>第二列，第一行</td>
+            <td colspan="2">横跨两列，第一行</td>
+        </tr>
+        <tr>
+            <td>第一列，第二行</td>
+            <td>第二列，第二行</td>
+            <td>第三列，第二行</td>
+            <td>第四列，第二行</td>
+        </tr>
+    </table>
+</body>
+</html>
