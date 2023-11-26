@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* 属性存在选择器 */
+    [class] {
+      color: blue;
+    }
+
+    /* 精确匹配属性选择器 */
+    [lang="en"] {
+      font-weight: bold;
+    }
+
+    /* 前缀匹配属性选择器 */
+    [href^="https://"] {
+      text-decoration: underline;
+    }
+
+    /* 后缀匹配属性选择器 */
+    [src$=".jpg"] {
+      border: 1px solid black;
+    }
+
+    /* 包含匹配属性选择器 */
+    [title*="example"] {
+      background-color: yellow;
+    }
+  </style>
+  <title>属性选择器示例</title>
+</head>
+<body>
+
+<!-- 属性存在选择器示例 -->
+<div class="example">这是一个具有 class 属性的元素。</div>
+
+<!-- 精确匹配属性选择器示例 -->
+<p lang="en">这是一段使用 lang 属性的英文文本。</p>
+
+<!-- 前缀匹配属性选择器示例 -->
+<a href="https://www.example.com">这是一个链接，以 https:// 开头。</a>
+
+<!-- 后缀匹配属性选择器示例 -->
+<img src="image.jpg" alt="一个图片，以 .jpg 结尾。">
+
+<!-- 包含匹配属性选择器示例 -->
+<span title="example-tooltip">这个元素的 title 属性包含 'example'。</span>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* :hover 伪类选择器，鼠标悬停时应用样式 */
+    a:hover {
+      color: red;
+    }
+
+    /* :first-child 伪类选择器，选择父元素下的第一个子元素 */
+    li:first-child {
+      font-weight: bold;
+    }
+
+    /* :nth-child 伪类选择器，选择父元素下的第二个子元素 */
+    p:nth-child(2) {
+      color: blue;
+    }
+
+    /* :not 伪类选择器，选择不是 h2 元素的所有元素 */
+    :not(h2) {
+      background-color: lightgray;
+    }
+
+    /* :nth-of-type 伪类选择器，选择所有偶数位置的段落元素 */
+    p:nth-of-type(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <title>伪类选择器示例</title>
+</head>
+<body>
+
+<!-- :hover 伪类选择器示例 -->
+<a href="#">悬停鼠标改变颜色</a>
+
+<!-- :first-child 伪类选择器示例 -->
+<ul>
+  <li>第一个列表项（应用粗体样式）</li>
+  <li>第二个列表项</li>
+  <li>第三个列表项</li>
+</ul>
+
+<!-- :nth-child 伪类选择器示例 -->
+<div>
+  <p>第一个段落</p>
+  <p>第二个段落（应用蓝色样式）</p>
+  <p>第三个段落</p>
+</div>
+
+<!-- :not 伪类选择器示例 -->
+<div>
+  <h2>标题</h2>
+  <p>这个段落不是 h2 元素（应用灰色背景）</p>
+</div>
+
+<!-- :nth-of-type 伪类选择器示例 -->
+<div>
+  <p>第一个段落</p>
+  <p>第二个段落（应用灰色背景）</p>
+  <p>第三个段落</p>
+</div>
+
+</body>
+</html>
