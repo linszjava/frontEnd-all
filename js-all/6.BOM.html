@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BOM</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            //1.窗口大小
+            console.log(window.innerWidth)
+            console.log(window.innerHeight)
+            console.log(window.outerWidth)
+            console.log(window.outerHeight)
+
+            // //2.打开新窗口
+            // window.open("http://www.baidu.com","_blank","width=200,height=200")
+
+            //3. 超时调用
+            window.setTimeout(function () {
+                console.log("hello world")
+            },1000)
+
+            //4. 取消超时调用
+            var timeout = window.setTimeout(function () {
+                console.log("linsz")
+            },1000)
+            window.clearTimeout(timeout)
+
+            //5. 间歇调用
+            // var interval = window.setInterval(function () {
+            //     console.log("linsz")
+            // },1000)
+            // window.clearInterval(interval)
+
+            //6. 系统对话框
+            // window.alert("linsz")
+            // window.confirm("linsz")
+            // prompt("linsz");
+
+            //7. location对象
+            console.log(location.href)
+            console.log(location.protocol)
+            console.log(location.host)
+            console.log(location.port)
+            console.log(location.pathname)
+            console.log(location.search)
+            console.log(location.hash)
+
+            // location.reload();
+            // location.replace("http://www.baidu.com")
+
+            //8. navigator对象
+            console.log(navigator.userAgent)
+            console.log(navigator.platform)
+            console.log(navigator.appVersion)
+            console.log(navigator.appName)
+            console.log(navigator.appCodeName)
+            console.log(navigator.cookieEnabled)
+            console.log(navigator.javaEnabled())
+            console.log(navigator.onLine)
+            console.log(navigator.product)
+            console.log(navigator.language)
+            console.log(navigator.plugins)
+            console.log(navigator.mimeTypes)
+
+            //9. screen对象
+            console.log(screen.width)
+            console.log(screen.height)
+            console.log(screen.availWidth)
+            console.log(screen.availHeight)
+            console.log(screen.colorDepth)
+            console.log(screen.pixelDepth)
+
+            //10. history对象
+            console.log(history.length)
+            console.log(history.back())
+            console.log(history.forward())
+            console.log(history.go(1))
+            console.log(history.go(-1))
+            console.log(history.go(2))
+
+
+            //11.document对象
+            console.log(document.title)
+            console.log(document.URL)
+            console.log(document.domain)
+            console.log(document.referrer)
+            console.log(document.body)
+            console.log(document.head)
+            console.log(document.images)
+            console.log(document.links)
+            console.log(document.forms)
+            console.log(document.anchors)
+            console.log(document.applets)
+            console.log(document.embeds)
+
+
+
+
+
+
+
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
