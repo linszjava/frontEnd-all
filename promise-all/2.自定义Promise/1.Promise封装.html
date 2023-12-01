@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise封装</title>
+    <script src="2.custom-promise.js"></script>
+</head>
+<body>
+
+<script>
+    const p = new Promise((resolve, reject)=>{
+        resolve('ok')
+        // reject('error')
+        // throw 'err'
+        // setTimeout(()=>{
+        //     resolve('ok')
+        // }, 1000)
+    })
+
+    console.log(p)
+    const res = p.then(value=>{
+        console.log(value)
+    }, reason=>{
+        console.warn(reason)
+    })
+    console.log(res)
+    // p.then(value=>{
+    //     window.alert(value)
+    // }, reason=>{
+    //     console.warn(reason)
+    // })
+</script>
+
+</body>
+</html>

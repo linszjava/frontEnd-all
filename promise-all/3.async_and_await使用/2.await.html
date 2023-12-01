@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>await的使用</title>
+</head>
+<body>
+    <script>
+        async function test() {
+            let promise = new Promise((resolve, reject) => {
+                // resolve('success')
+                reject('error')
+            })
+
+            //1.await后面可以追加promise对象，获取resolve的值
+            let result = await promise
+            //2.await必须包裹在async函数里面
+            // let result2 = await 10;  // 10
+            // console.log(result2)
+            //3. await后面的promise如果失败了，会抛出异常，需要通过try...catch来捕获处理
+            try {
+                let result3 = await promise;
+            }catch (e) {
+                console.log(e)
+            }
+            await test()
+        }
+        test()
+    </script>
+</body>
+</html>

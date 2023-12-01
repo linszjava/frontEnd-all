@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promise初体验</title>
+    <link rel="stylesheet" href="../../bootstrap5-all/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: "Apple Braille",sans-serif ;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto 30px;
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 标题   -->
+<div class="container">
+    <h2>抽奖</h2>
+    <button id="btn-1" class="btn btn-primary">按钮</button>
+</div>
+
+<script type="text/javascript" src="../../bootstrap5-all/js/bootstrap.js" ></script>
+<script>
+    // 生成指定范围内的随机整数
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    //1. 传统写法
+    // setTimeout(() =>{
+    //         document.getElementById("btn-1").addEventListener("click", function () {
+    //             // 1. 生成随机数
+    //             const num = getRandomInt(1, 100);
+    //             // 2. 判断随机数的大小
+    //             if (num > 30) {
+    //                 console.log(num)
+    //                 alert("恭喜你中奖了")
+    //             } else {
+    //                 console.log(num)
+    //                 alert("很遗憾，没有中奖")
+    //             }
+    //         })
+    //     },
+    // 1000)
+
+    //2. Promise写法
+    document.getElementById("btn-1").addEventListener("click", function () {
+        const p = new Promise((resolve, reject)=>{
+            setTimeout(() =>{
+                // 1. 生成随机数
+                let num = getRandomInt(1, 100);
+                // 2. 判断随机数的大小
+                if (num >= 30) {
+                    console.log(num)
+                    resolve(num)
+                } else {
+                    console.log(num)
+                    reject(num)
+                }
+            }, 1000)
+
+        })
+        p.then((value)=>{
+            alert("恭喜你中奖了,中奖号码是" + value)
+        }, (reason)=>{
+            alert("很遗憾，没有中奖,号码是" + reason)
+        })
+
+    })
+
+
+</script>
+
+</body>
+</html>
