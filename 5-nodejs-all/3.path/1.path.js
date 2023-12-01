@@ -2,7 +2,7 @@ const path = require('path');
 
 console.log(path.sep); // 获取当前系统的路径分隔符
 console.log(path.delimiter); // 获取当前系统的环境变量分隔符
-console.log(path.basename('/Users/linsz/Documents/vscode/frontEnd-all/nodejs-all/3.path/1.path.js')); // 获取文件名
+console.log(path.basename('/Users/linsz/Documents/vscode/frontEnd-all/5-nodejs-all/3.path/1.path.js')); // 获取文件名
 
 //拼接绝对路径
 console.log(path.resolve(__dirname, 'test'));
