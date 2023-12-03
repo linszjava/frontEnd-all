@@ -77,5 +77,12 @@ module.exports = {
             template: path.resolve(__dirname, 'public/index.html')
         })
     ],
-    mode: 'development'
+    mode: 'development',
+    devServer: {
+        // contentBase: path.resolve(__dirname, 'dist'),
+        host: 'localhost',
+        open: true,
+        port: 9999,
+        hot: true,
+    }
 }
