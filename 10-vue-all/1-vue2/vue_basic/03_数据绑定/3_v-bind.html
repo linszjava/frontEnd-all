@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>v-bind</title>
+  <script type="text/javascript" src="../js/vue.js"></script>
+</head>
+<body>
+
+  <div id="root">
+
+      <h2>{{name}}</h2>
+    <!--  适用于表单的v-bind     -->
+      单向数据绑定 <input type="text" v-bind:value="model.num1"></input>
+      双向数据绑定 <input type="text" v-model:value="model.num2"></input>
+      双向数据绑定语法糖 <input type="text" v-model="model.num2"></input>
+  </div>
+
+  <script>
+    const vm = new Vue({
+        el:'#root',
+        data:{
+            name:'vue',
+            model :{
+                num1 : 1,
+                num2 : 2
+            }
+            }
+        });
+  </script>
+
+</body>
+</html>

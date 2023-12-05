@@ -1,0 +1,36 @@
+{
+  "include": [
+    "1-basic/src/**/*"
+  ], //定义要包含的文件
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "extends": [], //定义被继承的配置文件 继承的是配置文件
+  "files": [], //定义要包含的文件  指定被编译文件的列表，只有需要编译的文件少时才会用到
+  "compilerOptions": {
+    "target": "es6", //指定ECMAScript目标版本
+    "module": "commonjs", //指定模块代码生成
+    "lib": ["es6", "dom"], //指定要包含在编译中的库文件
+    "allowJs": true, //允许编译javascript文件
+    "checkJs": true, //报告javascript文件中的错误
+    "jsx": "preserve", //指定jsx代码的生成
+    "declaration": true, //生成相应的.d.ts文件
+    "sourceMap": true, //生成相应的.map文件
+//    "outFile": "./all.js", //将输出文件合并为一个文件
+    "outDir": "./dist", //指定输出目录
+    "rootDir": "./", //指定输入文件的根目录
+    "removeComments": true, //删除编译后的所有的注释
+    "noEmit": true, //不生成输出文件
+    "importHelpers": true, //从tslib导入辅助工具函数
+    "downlevelIteration": true, //降级遍历器
+//    "isolatedModules": true, //将每个文件做为单独的模块
+    "noEmitOnError": true, //发生错误时不生成编译文件
+    "strict": true, //启用所有严格类型检查选项
+    "noImplicitAny": true, //在表达式和声明上有隐含的any类型时报错
+    "strictNullChecks": true, //启用严格的null检查
+    "noUnusedLocals": true, //有未使用的变量时，抛出错误
+    "noUnusedParameters": true, //有未使用的参数时，抛出错误
+    "noImplicitReturns": true, //有函数没有返回值时，抛出错误
+    "noFallthroughCasesInSwitch": true, //在switch语句中，禁止穿透
+    "baseUrl": "./", //解析非相对模块名的基准目录
+    "paths": {}, //模块名到基于
+  }
+}
